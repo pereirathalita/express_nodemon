@@ -15,7 +15,7 @@ const produtoController = {
             nome,
             preco,
             quantidade,
-            fabricante_id,
+            // fabricante_id,
         });
 
         const categoria = await Categorias.findByPk(categoria_id);
@@ -34,7 +34,7 @@ const produtoController = {
             },
         });
 
-        res.json("Produto deletado");
+        res.status(204);
     },
 
     async atualizarProduto(req, res) {
